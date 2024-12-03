@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="logo">
+                <img src="{{ url_for('static', filename='images/logo2.png') }}" alt="Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="/" class="nav-link"><i class="fa-solid fa-chart-bar"></i> Statistics</a></li>
+                <li><a href="/profile" class="nav-link"><i class="fa-solid fa-user"></i> Profile</a></li>
+                <li><a href="/preventive" class="nav-link"><i class="fa-solid fa-tools"></i> Preventive Trigger</a></li>
+                <li><a href="/ai-troubleshooter" class="nav-link"><i class="fa-solid fa-robot"></i> AI Troubleshooter</a></li>
+                <li><a href="/alert-alarm" class="nav-link"><i class="fa-solid fa-bell"></i> Alert Alarm</a></li>
+                <li><a href="/fault-report" class="nav-link"><i class="fa-solid fa-wrench"></i> Fault Report</a></li>
+                <li><a href="/history" class="nav-link"><i class="fa-solid fa-history"></i> History</a></li>
+                <li><a href="/logout" class="nav-link"><i class="fa-solid fa-sign-out-alt"></i> Logout</a></li>
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <div class="content">
+            <header>
+                <h1>Chennai Metro Rail Limited</h1>
+                <p>Home</p>
+            </header>
+            <section class="main-content">
+                <div class="section-item">
+                    <div class="item" onclick="navigateTo('/preventive')">
+                        <img src="{{ url_for('static', filename='images/preventive-trigger.png') }}" alt="Preventive Trigger">
+                        <span>Preventive Trigger</span>
+                    </div>
+                    <div class="item" onclick="navigateTo('/ai-troubleshooter')">
+                        <img src="{{ url_for('static', filename='images/ai-troubleshooter.png') }}" alt="AI Troubleshooter">
+                        <span>AI Troubleshooter</span>
+                    </div>
+                    <div class="item" onclick="navigateTo('/alert-alarm')">
+                        <img src="{{ url_for('static', filename='images/alert-alarm.png') }}" alt="Alert Alarm">
+                        <span>Alert Alarm</span>
+                    </div>
+                </div>
+                <div class="section-item">
+                    <div class="item" onclick="navigateTo('/profile')">
+                        <img src="{{ url_for('static', filename='images/profile.png') }}" alt="Profile">
+                        <span>Profile</span>
+                    </div>
+                    <div class="item" onclick="navigateTo('/fault-report')">
+                        <img src="{{ url_for('static', filename='images/fault-report.png') }}" alt="Fault Report">
+                        <span>Fault Report</span>
+                    </div>
+                    <div class="item" onclick="navigateTo('/history')">
+                        <img src="{{ url_for('static', filename='images/history.png') }}" alt="History">
+                        <span>History</span>
+                    </div>
+                    <div class="item" onclick="navigateTo('/logout')">
+                        <img src="{{ url_for('static', filename='images/logout.png') }}" alt="Logout">
+                        <span>Logout</span>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script>
+        function navigateTo(page) {
+            window.location.href = page;
+        }
+    </script>
+</body>
+</html>

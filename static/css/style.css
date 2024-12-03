@@ -1,0 +1,235 @@
+/* General reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  background-color: #121212;
+
+}
+
+/* Navbar styling */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #212121; /* Dark background color */
+  color: white;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo-and-title {
+  display: flex;
+  align-items: center;
+  
+}
+
+.logo-img {
+  height: 40px;
+  margin-right: 10px;
+  background-color: #212121;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  background-color: #212121;
+}
+
+.title h1 {
+  font-size: 18px;
+  text-align: left;
+  background-color: #212121;
+}
+
+.title p {
+  font-size: 14px;
+  color: #888;
+  margin-top: 2px;
+  text-align: left;
+  background-color: #212121;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+}
+
+.search-bar input {
+  padding: 5px;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+  margin-right: 5px;
+  background-color: #333;
+  color: white;
+}
+
+.search-bar input::placeholder {
+  color: #aaa;
+}
+
+.search-bar button {
+  background-color: #3a3f51; /* Button background */
+  border: none;
+  padding: 5px 10px;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.search-bar button:hover {
+  background-color: #555;
+}
+
+/* Sidebar styling */
+.sidebar {
+  width: 50px;
+  height: 100vh;
+  background-color: #121212; /* Dark sidebar */
+  color: white;
+  padding: 20px 10px;
+  position: fixed;
+  top: 60px; /* Below the navbar */
+  left: 0;
+  overflow-y: auto;
+}
+
+.icon-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.icon-list li {
+  font-size: 20px;
+  color: #888;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.icon-list li:hover {
+  color: white;
+}
+
+/* Main Content */
+.main-content {
+  margin-left: 100px; /* Space for sidebar */
+  margin-top: 80px; /* Space for navbar */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  background-color: #121212;
+}
+
+/* System List Section */
+.system-list-section {
+  width: 300px;
+  background-color: #121212; /* Match sidebar theme */
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  border: 3px solid #673ab7;
+  margin-top: 30px;
+
+}
+
+.system-list-section h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.system-list {
+  list-style: none;
+}
+
+.system-list li {
+  background-color: #1e1e1e;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 15px;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.3s;
+  border: 2px solid white;
+  
+}
+
+.system-list li:hover {
+  background-color: #3a3f51;
+}
+
+/* Charts Section */
+.charts-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+  width: calc(100% - 320px); /* Adjust width for sidebar */
+}
+
+.chart-container {
+  flex: 1;
+  height: 300px;
+  background-color: #121212; /* Updated background */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border: 3px solid #673ab7;
+  margin-right: 30px;
+  margin-top: 30px;
+}
+
+.pie-legend-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.custom-legend {
+  background-color: #121212;
+  color: white;
+  border-radius: 10px;
+  padding: 10px;
+  width: 150px;
+  height: fit-content;
+}
+
+.custom-legend h3 {
+  margin-bottom: 10px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.custom-legend ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.custom-legend li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+  font-size: small;
+}
+
+.color-box {
+  width: 10px;
+  height: 10px;
+  margin-right: 10px;
+  border-radius: 3px;
+}
+
+/* ChartJS Overrides */
+canvas {
+  max-width: 100%;
+  height: auto;
+}

@@ -1,0 +1,219 @@
+body {
+    margin: 0;
+    font-family: "Poppins", "sans serif";
+    background-color: #121212;
+    color: #fff;
+    display: flex;
+    height: 100vh;
+    display: flex;
+  }
+
+  .sidebar {
+    width: 60px;
+    background-color: #1e1e1e;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.5);
+  }
+  
+  .sidebar-header h1{
+    position: absolute; /* Absolute positioning within the content area */
+    top: 10px; /* Space from the top */
+    left: 10px; /* Space from the left */
+    color: #ffffff;
+    font-family: "Poppins", sans-serif;
+    font-size:xx-large;
+  }
+  
+  
+  .sidebar-header p {
+    font-size: 14px;
+    color: #aaa;
+  }
+  
+  .sidebar-nav ul {
+    list-style: none;
+    padding: 0;
+    color: #fff;
+  }
+
+  .bi bi-clock-history{
+    text-align: center;
+    size: 15px;
+    color: #ffffff;
+  }
+
+  .userlogo{
+    color: #ffffff!important;
+  }
+  
+  .sidebar-nav li {
+    margin: 10px 0;
+    color: #ccc;
+    cursor: pointer;
+  }
+  
+  .sidebar-nav li:hover {
+    color: #fff;
+  }
+  
+  /* Main Content */
+  .content {
+    flex: 1;
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    position: relative;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.3), rgba(0, 0, 0, 1)); /* Radial gradient background */
+  }
+  
+  /* Circle Layout */
+  .circle {
+    position: relative;
+    width: 600px;
+    height: 600px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    border-radius: 50%;
+    
+    gap: 8px; /* Add spacing between quadrants */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    
+  }
+  
+  .quadrant {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    padding: 20px;
+    color: #fff;
+    border-radius: 20px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    
+  }
+  
+  .quadrant:hover {
+    transform: scale(1.1);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.3), rgba(0, 0, 0, 1));
+    border: 2px solid transparent; /* Placeholder border to maintain dimensions */
+    border-radius: 20px; /* Ensures the rounded edges */
+    background-clip: padding-box; /* Ensures the gradient doesn't extend into the content */
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.5);
+  }
+  
+  
+  #part {
+    background: linear-gradient(to bottom right, purple, #7d3cb5);
+    border-top-left-radius: 100%;
+    align-items: center;
+  }
+  
+  #date {
+    background: linear-gradient(to bottom left, green, #1a8431);
+    border-top-right-radius: 100%;
+  }
+  
+  #fault {
+    background: linear-gradient(to top right, orange, #cc4b00);
+    border-bottom-left-radius: 100%;
+  }
+  
+  #unit {
+    background: linear-gradient(to top left, blue, #004b8d);
+    border-bottom-right-radius: 100%;
+  }
+  
+  .icon1 {
+    size: 100px!important;
+    margin-bottom: 10px;
+    padding-left: 20px;
+  }
+
+  .icon2 {
+    size: 100px!important;
+    margin-bottom: 10px;
+    padding-left: 90px;
+  }
+
+  .icon3 {
+    size: 100px!important;
+    margin-bottom: 10px;
+    padding-left: 120px!important;
+    padding-bottom: 10px;
+  }
+
+  .icon4 {
+    size: 100px!important;
+    margin-bottom: 10px;
+    padding-left: 90px;
+  }
+  
+  .quadrant h2 {
+    font-size: 18px;
+    
+    text-align: center;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  
+  .quadrant p {
+    color: #ffffff;
+  }
+
+  .cmrl{
+    align-items: flex-start;
+    position: relative;
+  }
+
+  .text1{
+    font-family: "Poppins", "sans serif";
+    padding-left: 20px;
+    text-align: center;
+    font-weight: 280;
+    font-size: small;
+    padding-right: 10px;
+  }
+
+  .text2{
+    font-family: "Poppins", "sans serif";
+    text-align: center;
+    font-weight: 280;
+    font-size: small;
+    padding-right: 50px;
+    padding-left: 10px;
+  }
+
+  .text3{
+    font-family: "Poppins", "sans serif";
+    padding-left: 50px;
+    text-align: center;
+    font-weight: 280;
+    font-size: small;
+  }
+
+  .text4{
+    font-family: "Poppins", "sans serif";
+    text-align: center;
+    font-weight: 280;
+    font-size: small;
+    padding-right: 50px;
+  }
+
+  .btex1{
+    padding-left: 85px!important;
+  }
+
+  .btex2{
+    padding-right: 75px!important;
+  }
+
+  .btex3{
+    padding-left: 80px!important;
+  }
+
+  .btex4{
+    padding-right: 80px!important;
+  }

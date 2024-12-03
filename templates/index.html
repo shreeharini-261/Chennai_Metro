@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="home.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #000000; /* Black background for the whole page */
+            color: white;
+        }
+
+        /* Sidebar styles */
+        .sidebar {
+            width: 80px;
+            background-color: #2c2f38; /* Dark gray background */
+            color: white;
+            padding: 20px 0;
+            position: fixed;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: start;
+        }
+
+        .sidebar img {
+            width: 40px;
+            margin-bottom: 30px;
+        }
+
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .sidebar ul li {
+            margin: 20px 0;
+            cursor: pointer;
+            padding: 10px;
+            background-color: #3b3f47;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .sidebar ul li:hover {
+            background-color: #50575d;
+        }
+
+        .sidebar ul li img {
+            width: 30px;
+            vertical-align: middle;
+        }
+
+        .sidebar ul li span {
+            display: none;
+        }
+
+        /* Content area styles */
+        .content {
+            margin-left: 80px;
+            padding: 20px;
+            background-color: #000000; /* Black background for content area */
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #2196F3; /* Blue background for header */
+            padding: 20px;
+            color: white;
+        }
+
+        .header .logo {
+            width: 80px;
+        }
+
+        .header .header-text h1 {
+            margin: 0;
+            font-size: 1.8em;
+        }
+
+        .header .sub-header {
+            display: flex;
+            align-items: center;
+        }
+
+        .header .sub-header img {
+            width: 20px;
+            margin-right: 10px;
+        }
+
+        .button-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .button {
+            background-color: #FFF;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .button:hover {
+            transform: scale(1.05);
+        }
+
+        .button img {
+            width: 50px;
+            margin-bottom: 10px;
+        }
+
+        .button span {
+            display: block;
+            font-size: 1.1em;
+            color: #333;
+        }
+
+        /* Color scheme for the buttons */
+        .preventive-button {
+            background: linear-gradient(to bottom, #FFA726, #FB8C00);
+        }
+
+        .ai-button {
+            background: linear-gradient(to bottom, #7E57C2, #5E35B1);
+        }
+
+        .alert-button {
+            background: linear-gradient(to bottom, #66BB6A, #43A047);
+        }
+
+        .profile-button {
+            background: linear-gradient(to bottom, #FFCA28, #FDD835);
+        }
+
+        .report-button {
+            background: linear-gradient(to bottom, #42A5F5, #1E88E5);
+        }
+
+        .history-button {
+            background: linear-gradient(to bottom, #29B6F6, #039BE5);
+        }
+
+        .logout-button {
+            background: linear-gradient(to bottom, #EF5350, #E53935);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <img src="static/images/logo2.png" alt="Logo" class="logo">
+            <ul>
+                <li><a href="/preventive"><img src="static/images/preventive-trigger.png" alt="Preventive Trigger"></a></li>
+                <li><a href="/ai-troubleshooter"><img src="static/images/ai-troubleshooter.png" alt="AI Troubleshooter"></a></li>
+                <li><a href="/alert-alarm"><img src="static/images/alert-alarm.png" alt="Alert Alarm"></a></li>
+                <li><a href="/profile"><img src="static/images/profile.png" alt="Profile"></a></li>
+                <li><a href="/fault-report"><img src="static/images/fault-report.png" alt="Fault Report"></a></li>
+                <li><a href="/history"><img src="static/images/history.png" alt="History"></a></li>
+                <li><a href="/logout"><img src="static/images/logout.png" alt="Logout"></a></li>
+            </ul>
+        </div>
+
+        <!-- Content -->
+        <div class="content">
+            <div class="header">
+                <div class="header-content">
+                    <img src="static/images/logo2.png" alt="Logo" class="logo">
+                    <div class="header-text">
+                        <h1>Chennai Metro Rail Limited</h1>
+                        <div class="sub-header">
+                            <img src="static/images/home.png" alt="Home Icon" class="home-icon">
+                            <span>Home</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="button-grid">
+                <!-- First Row -->
+                <div class="button preventive-button"><a href="/preventive"><img src="static/images/preventive-trigger.png" alt="Preventive Trigger"><span>Preventive Trigger</span></a></div>
+                <div class="button ai-button"><a href="/ai-troubleshooter"><img src="static/images/ai-troubleshooter.png" alt="AI Troubleshooter"><span>AI Troubleshooter</span></a></div>
+                <div class="button alert-button"><a href="/alert-alarm"><img src="static/images/alert-alarm.png" alt="Alert Alarm"><span>Alert Alarm</span></a></div>
+            </div>
+
+            <!-- Second Row -->
+            <div class="button-grid">
+                <div class="button profile-button"><a href="/profile"><img src="static/images/profile.png" alt="Profile"><span>Profile</span></a></div>
+                <div class="button report-button"><a href="/fault-report"><img src="static/images/fault-report.png" alt="Fault Report"><span>Fault Report</span></a></div>
+                <div class="button history-button"><a href="/history"><img src="static/images/history.png" alt="History"><span>History</span></a></div>
+                <div class="button logout-button"><a href="/logout"><img src="static/images/logout.png" alt="Logout"><span>Logout</span></a></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
